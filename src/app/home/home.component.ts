@@ -7,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  userName: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
+    this.userName = "";
   }
 
   showMsg(){
     alert("Event Triggered")
+  }
+
+  updateUserName(e: any){
+    this.userName = (e.target as HTMLInputElement).value;
   }
 
 }
