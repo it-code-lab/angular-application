@@ -5,17 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
-  userName: string = "";
+  firstNum: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.userName = "";
   }
 
-  showMsg(){
+  showMsg() {
     alert("Event Triggered")
   }
 

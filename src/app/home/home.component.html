@@ -1,5 +1,7 @@
 <button (click)="showMsg()"> Demo </button>
 <br><br>
-<input type="text" [(ngModel)] ="userName" >
+Enter a number
 <br>
-{{userName}}
+<input type="text" [(ngModel)] ="firstNum" >
+<br>
+<div *ngIf='firstNum % 2 == 0'> Even</div>
