@@ -19,8 +19,4 @@ export class HomeComponent implements OnInit {
     alert("Event Triggered")
   }
 
-  updateUserName(e: any){
-    this.userName = (e.target as HTMLInputElement).value;
-  }
-
 }
