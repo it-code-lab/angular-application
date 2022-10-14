@@ -1,7 +1,13 @@
 <button (click)="showMsg()"> Demo </button>
 <br><br>
-Enter a number
-<br>
-<input type="text" [(ngModel)] ="firstNum" >
-<br>
-<div *ngIf='firstNum % 2 == 0'> Even</div>
+
+<select [(ngModel)]="selectedTripCost">
+    <option *ngFor="let item of ticketsCost;" [value]="item.cost">{{item.destination}}</option>
+</select>
+
+<div class='row' [ngSwitch]="selectedTripCost">
+    <div *ngSwitchCase="'200'">Looks Good</div>
+    <div *ngSwitchCase="'600'">Will think about it</div>
+    <div *ngSwitchCase="'800'">Too Expensive</div>
+    <div *ngSwitchDefault>What are the options</div>
+</div>

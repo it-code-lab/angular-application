@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-  firstNum: number = 0;
+  ticketsCost: any[] = [{ destination: 'Florida', cost: 800 }, { destination: 'Las Vegas', cost: 600 }, { destination: 'New York', cost: 200 }, { destination: 'Texas', cost: 200 }];
+  selectedTripCost: number = 0;
 
   constructor() { }
 
