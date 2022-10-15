@@ -1,6 +1,23 @@
-<button (click)="showMsg()"> Demo </button>
+Price Limit: <input type="text" [(ngModel)]="maxPrice">
+<br><br>
+<button (click)="getProducts()"> Display Products </button>
 <br><br>
 
-<div appMyDirective>
-    Test
-</div>
+<table class='table'>
+    <thead *ngIf="products.length > 0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;">
+            <ng-container *ngIf="product.price <= maxPrice">
+                <td>{{product.productID}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
