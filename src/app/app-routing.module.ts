@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'pipedemo', component: PipedemoComponent },
+  { path: 'pipedemo/:id', component: PipedemoComponent },
   { path: '**', component: ErrorpageComponent }
 ];
 
