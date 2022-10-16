@@ -1,9 +1,12 @@
 <div *ngIf="idParm">
-    ID {{idParm}} has been received
+    Path parameter id with value {{idParm}} has been received
 </div>
 
+<div *ngIf="qryParm">
+    Query parameter id with value {{qryParm}} has been received
+</div>
 
-<div *ngIf="!idParm">
+<div *ngIf="!idParm && !qryParm">
     {{ 64 | cuberoot }}
     <br>
     {{ dateProp | date }}

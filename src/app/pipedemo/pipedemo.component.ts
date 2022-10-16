@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PipedemoComponent implements OnInit {
 
   idParm: any = null;
+  qryParm: any = null;
   dateProp: Date = new Date();
   stringProp: string = "Hello World";
   piProp: number = 3.14159265359;
@@ -17,8 +18,14 @@ export class PipedemoComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.idParm = params.get('id')
+    this.route.params.subscribe(params => {
+      this.idParm = params['id']
+      //console.log(this.idParm);
+    });
+
+    this.route.queryParams.subscribe(params => {
+      this.qryParm = params['id']
+      //console.log(this.qryParm);
     });
   }
 
