@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { MyDirectiveDirective } from './my-directive.directive';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CuberootPipe } from './cuberoot.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { CuberootPipe } from './cuberoot.pipe';
     HomeComponent,
     MyDirectiveDirective,
     PipedemoComponent,
-    CuberootPipe
+    CuberootPipe,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
