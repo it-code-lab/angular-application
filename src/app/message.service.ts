@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class MessageService {
 
   API_URL: string;
-  constructor(private http: HttpClient) {
+  constructor() {
     this.API_URL = "some_url";
   }
 
