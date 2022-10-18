@@ -4,17 +4,18 @@ import { MessageService } from '../message.service';
 
 import { GreetComponent } from './greet.component';
 
+class MockMessageService extends MessageService { 
+  override getMessage() {
+    return {message: "Happy New Year"};
+  }
+}
+
 describe('GreetComponent Test Suite', () => {
   let component: GreetComponent;
-  let service: MessageService;
+  let service: MockMessageService;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [GreetComponent],
-      imports: [HttpClientTestingModule]
-    })
-      .compileComponents();
-    service = new MessageService();
+    service = new MockMessageService();
     component = new GreetComponent(service);
   });
 
