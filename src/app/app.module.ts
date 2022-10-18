@@ -9,6 +9,8 @@ import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CuberootPipe } from './cuberoot.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { GreetComponent } from './greet/greet.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     MyDirectiveDirective,
     PipedemoComponent,
     CuberootPipe,
-    ErrorpageComponent
+    ErrorpageComponent,
+    GreetComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
