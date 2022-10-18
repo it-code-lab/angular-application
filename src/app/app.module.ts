@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { GreetComponent } from './greet/greet.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

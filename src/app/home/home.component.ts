@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 export class HomeComponent implements OnInit {
 
-  products: any ;
+  products: any = [] ;
   maxPrice:any;
 
   constructor(private ps:ProductService, private router: Router, private route: ActivatedRoute) { }
