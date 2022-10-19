@@ -12,6 +12,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { GreetComponent } from './greet/greet.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MessageService } from './message.service';
+import { AdirectiveDirective } from './adirective.directive';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MessageService } from './message.service';
     PipedemoComponent,
     CuberootPipe,
     ErrorpageComponent,
-    GreetComponent
+    GreetComponent,
+    AdirectiveDirective
   ],
   imports: [
     BrowserModule,
