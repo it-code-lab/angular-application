@@ -14,6 +14,6 @@ export class MessageService {
   getMessage() {
     //Call API to get the message based on the time of the year. Like "Happy New Year", "Happy Thanksgiving", "Merry Christmas". Sample response: {message: "Happy New Year"}
     //return this.http.get(this.API_URL);
-    return {message: "Happy New Year"};
+    return {message: "Happy Birthday"};
   }
 }
